@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hanchuntao.github.io/post/second/</loc>
+    <lastmod>2019-03-25T21:54:02+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hanchuntao.github.io/post/first/</loc>
     <lastmod>2019-03-18T16:04:09+08:00</lastmod>
   </url>
@@ -19,13 +24,13 @@
   
   <url>
     <loc>https://hanchuntao.github.io/</loc>
-    <lastmod>2019-03-18T16:04:09+08:00</lastmod>
+    <lastmod>2019-03-25T21:54:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hanchuntao.github.io/post/</loc>
-    <lastmod>2019-03-18T16:04:09+08:00</lastmod>
+    <lastmod>2019-03-25T21:54:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
