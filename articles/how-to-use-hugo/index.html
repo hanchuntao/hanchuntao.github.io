@@ -180,9 +180,9 @@
 
 
 
-<a  title="Getting started" href="https://hanchuntao.github.io/getting-started/">
+<a  title="文章" href="https://hanchuntao.github.io/articles/">
 	
-	Getting started
+	文章
 </a>
 
 
@@ -198,9 +198,9 @@
 
 
 
-<a  title="Adding content" href="https://hanchuntao.github.io/adding-content/">
+<a  title="算法" href="https://hanchuntao.github.io/algorithm/">
 	
-	Adding content
+	算法
 </a>
 
 
@@ -216,9 +216,9 @@
 
 
 
-<a  title="Roadmap" href="https://hanchuntao.github.io/roadmap/">
+<a  title="翻译" href="https://hanchuntao.github.io/translation/">
 	
-	Roadmap
+	翻译
 </a>
 
 
@@ -234,9 +234,27 @@
 
 
 
-<a  title="License" href="https://hanchuntao.github.io/license/">
+<a  title="Tips" href="https://hanchuntao.github.io/tips/">
 	
-	License
+	Tips
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="加入我们" href="https://hanchuntao.github.io/joinus/">
+	
+	加入我们
 </a>
 
 
@@ -342,7 +360,7 @@
 
 <blockquote>
 <ul>
-<li><p>到 Hugo Releases 下载对应的操作系统版本的Hugo二进制文件（hugo或者hugo.exe）
+<li><p>到 Hugo Releases (<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>)下载对应的操作系统版本的Hugo二进制文件（hugo或者hugo.exe）
 下载解压后添加到 Windows 的系统环境变量的 PATH 中即可，不需安装。
 可以直接放在C:\Users\chunt\go\bin下，这样就不需要添加系统环境变量</p></li>
 
@@ -437,25 +455,28 @@ $ pwd
 /c/code/hugo
 $ mkdir themes # 创建 themes 目录
 $ cd themes
-$ git clone https://github.com/spf13/hyde.git
+$ git clone https://github.com/digitalcraftsman/hugo-material-docs.git
 </code></pre>
 
 <h3 id="2-下载方法二">2. 下载方法二</h3>
 
 <pre><code>也可以添加到git的submodule中，优点是后面讲到用 travis 自动部署时比较方便。
 如果需要对主题做更改，最好fork主题再做改动。
-git submodule add https://github.com/spf13/hyde.git themes/hyde
+git submodule add https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs
 </code></pre>
 
-<h3 id="3-使用">3. 使用</h3>
+<h3 id="3-使用皮肤">3. 使用皮肤</h3>
+
+<p>将\blog\themes\hugo-fabric\exampleSite\config.toml 替换 \blog\config.toml</p>
+
+<p>注：config.toml文件是核心，对网站的配置多数需要修改该文件，而每个主题的配置又不完全一样。</p>
+
+<h3 id="4-修改皮肤">4. 修改皮肤</h3>
 
 <pre><code>如果需要调整更改主题，需要在 themes/hyde 目录下重新 build
-cd themeshyde &amp;&amp; npm i &amp;&amp; npm start
-</code></pre>
+cd themes/hugo-material-docs &amp;&amp; npm i &amp;&amp; npm start
 
-<h3 id="4-使用主题">4. 使用主题</h3>
-
-<pre><code>生成主题资源文件（hugo-fabric为主题名）
+生成主题资源文件（hugo-fabric为主题名）
 D:\git\blog&gt;hugo -t hugo-fabric
 Started building sites ...
 Built site for language en:
@@ -472,7 +493,7 @@ total in 35 ms
 将\blog\themes\hugo-fabric\exampleSite\config.toml 替换 \blog\config.toml
 </code></pre>
 
-<p>注：config.toml文件是核心，对网站的配置多数需要修改该文件，而每个主题的配置又不完全一样。</p>
+<h3 id="4-修改配置文件">4. 修改配置文件</h3>
 
 <h2 id="六-启动-hugo-自带的服务器">六、启动 hugo 自带的服务器</h2>
 
