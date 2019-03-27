@@ -356,17 +356,20 @@ brew install hugo
 
 <blockquote>
 <p>源码编译安装，首先安装好依赖的工具：
-Git
-Go 1.3+ (Go 1.4+ on Windows)</p>
+* Git
+*  Go 1.3+ (Go 1.4+ on Windows)</p>
 
 <p>设置好 GOPATH 环境变量，获取源码并编译：
-export GOPATH=$HOME/go
-go get -v github.com/spf13/hugo</p>
+* export GOPATH=$HOME/go
+* go get -v github.com/spf13/hugo</p>
 
 <p>源码会下载到 $GOPATH/src 目录, 即C:\Go\src</p>
 
-<p>如果需要更新所有Hugo的依赖库，增加 -u 参数：
-go get -u -v github.com/spf13/hugo</p>
+<p>如果需要更新所有Hugo的依赖库，增加 -u 参数：</p>
+
+<ul>
+<li>go get -u -v github.com/spf13/hugo</li>
+</ul>
 
 <p>The -u flag instructs get to use the network to update the named packages
 and their dependencies. By default, get uses the network to check out
@@ -378,33 +381,31 @@ missing packages but does not use it to look for updates to existing packages.</
 <h3 id="3-查看安装结果">3.  查看安装结果</h3>
 
 <p>可知hugo已经正常安装
-<img src="C:UserschuntDesktop1.png" alt="1" /></p>
+<img src="C:codehugostatic1.png" alt="1" /></p>
 
 <h2 id="三-创建hugo项目">三、创建hugo项目</h2>
 
 <blockquote>
-<ul>
-<li><p>使用Hugo快速生成站点，比如希望生成到 /path/to/site | C:\code\hugo路径：
-linux:  $ hugo new site /path/to/site
-windows:  hugo new site C:\code\hugo</p></li>
+<p>使用Hugo快速生成站点，比如希望生成到 /path/to/site | C:\code\hugo路径：
+* linux:  $ hugo new site /path/to/site
+* windows:  hugo new site C:\code\hugo</p>
 
-<li><p>这样就在 /path/to/site | C:\code\hugo目录里生成了初始站点，进去目录：
-cd /path/to/site
-cd  C:\code\hugo</p></li>
+<p>这样就在 /path/to/site | C:\code\hugo目录里生成了初始站点，进去目录：
+* cd /path/to/site
+* cd  C:\code\hugo</p>
 
-<li><p>站点目录结构：
-▸ archetypes/
-▸ content/
-▸ layouts/
-▸ static/
-config.toml</p></li>
+<p>站点目录结构：
+* ▸ archetypes/
+* ▸ content/
+* ▸ layouts/
+* ▸ static/
+*   config.toml</p>
 
-<li><p>config.toml是网站的配置文件，这是一个TOML文件，全称是Tom’s Obvious, Minimal Language，
+<p>config.toml是网站的配置文件，这是一个TOML文件，全称是Tom’s Obvious, Minimal Language，
 这是它的作者GitHub联合创始人Tom Preston-Werner 觉得YAML不够优雅，捣鼓出来的一个新格式。
-如果你不喜欢这种格式，你可以将config.toml替换为YAML格式的config.yaml，或者json格式的config.json。hugo都支持。</p></li>
+如果你不喜欢这种格式，你可以将config.toml替换为YAML格式的config.yaml，或者json格式的config.json。hugo都支持。</p>
 
-<li><p>content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。</p></li>
-</ul>
+<p>content目录里放的是你写的markdown文章，layouts目录里放的是网站的模板文件，static目录里放的是一些图片、css、js等资源。</p>
 </blockquote>
 
 <h2 id="四-创建文章">四、创建文章</h2>
@@ -412,10 +413,10 @@ config.toml</p></li>
 <h3 id="1-创建一个-about-页面">1. 创建一个 about 页面：</h3>
 
 <p>进入到C:\code\hugo
-$ hugo new about.md</p>
+&gt;* $ hugo new about.md</p>
 
 <p>about.md 自动生成到了 content/about.md ，打开 about.md 看下：
-<img src="C:UserschuntDesktop2.jpg" alt="2" /></p>
+<img src="C:codehugostatic2.jpg" alt="2" /></p>
 
 <p>内容是 Markdown 格式的，+++ 之间的内容是 TOML 格式的，根据你的喜好，你可以换成 YAML 格式（使用 &mdash; 标记）或者 JSON 格式。</p>
 
@@ -424,11 +425,11 @@ $ hugo new about.md</p>
 <p>$ hugo new post/first.md</p>
 
 <p>打开编辑 post/first.md ：
-<img src="C:UserschuntDesktop3.jpg" alt="3" /></p>
+<img src="C:codehugostatic3.jpg" alt="3" /></p>
 
 <h2 id="五-安装皮肤">五、安装皮肤</h2>
 
-<p>去 themes.gohugo.io 选择喜欢的主题，下载到 themes 目录中，然后在 config.toml 中配置 theme = &ldquo;hyde&rdquo; 即可。其他配置可见theme说明</p>
+<p>去 themes.gohugo.io 选择喜欢的主题，下载到 themes 目录中，配置可见theme说明</p>
 
 <h3 id="1-下载方法一">1. 下载方法一</h3>
 
@@ -449,9 +450,8 @@ git submodule add https://github.com/digitalcraftsman/hugo-material-docs.git the
 
 <h3 id="3-使用皮肤">3. 使用皮肤</h3>
 
-<p>将\blog\themes\hugo-fabric\exampleSite\config.toml 替换 \blog\config.toml</p>
-
-<p>注：config.toml文件是核心，对网站的配置多数需要修改该文件，而每个主题的配置又不完全一样。</p>
+<p>将\blog\themes\hugo-fabric\exampleSite\config.toml 替换 \blog\config.toml
+注：config.toml文件是核心，对网站的配置多数需要修改该文件，而每个主题的配置又不完全一样。</p>
 
 <h3 id="4-修改皮肤">4. 修改皮肤</h3>
 
@@ -475,14 +475,17 @@ total in 35 ms
 将\blog\themes\hugo-fabric\exampleSite\config.toml 替换 \blog\config.toml
 </code></pre>
 
-<h3 id="4-修改配置文件">4. 修改配置文件</h3>
+<h3 id="5-修改配置文件">5. 修改配置文件</h3>
 
-<h2 id="六-启动-hugo-自带的服务器">六、启动 hugo 自带的服务器</h2>
+<pre><code>根据个人实际情况，修改config.toml
+</code></pre>
+
+<h2 id="五-启动-hugo-自带的服务器">五、启动 hugo 自带的服务器</h2>
 
 <h3 id="1-在你的站点根目录执行-hugo-命令进行调试">1. 在你的站点根目录执行 Hugo 命令进行调试：</h3>
 
 <pre><code>回到hugo站点目录C:\code\hugo
-$ hugo server --theme=hyde --buildDrafts
+$ hugo server --theme=hugo-material-docs --buildDrafts
 </code></pre>
 
 <p>注明：v0.15 版本之后，不再需要使用 &ndash;watch 参数了
@@ -495,9 +498,7 @@ $ hugo server --theme=hyde --buildDrafts
 --buildDrafts 包括标记为草稿（draft）的内容。也可以用-D
 </code></pre>
 
-<h3 id="3-theme下载如果用的方法二-可以直接用hugo-server-d命令来启动">3. theme下载如果用的方法二，可以直接用hugo server -D命令来启动</h3>
-
-<h2 id="七-部署到github">七、 部署到github</h2>
+<h2 id="六-部署到github">六、 部署到github</h2>
 
 <h3 id="1-新建仓库">1. 新建仓库</h3>
 
@@ -511,7 +512,7 @@ baseUrl要在仓库setting里面查看，有可能跟仓库名不一样。
 
 <h3 id="2-在项目根目录执行hugo命令生成html静态页面">2. 在项目根目录执行Hugo命令生成HTML静态页面</h3>
 
-<pre><code>$ hugo --theme=hyde --baseUrl=&quot;https://hanchuntao.github.io/&quot;
+<pre><code>$ hugo --theme=hugo-material-docs --baseUrl=&quot;https://hanchuntao.github.io/&quot;
 </code></pre>
 
 <p>&ndash;theme 选项指定主题，
@@ -523,8 +524,7 @@ baseUrl要在仓库setting里面查看，有可能跟仓库名不一样。
 
 <h3 id="3-查看生成的页面">3. 查看生成的页面</h3>
 
-<p>如果一切顺利，所有静态页面都会生成到public目录
-<img src="C:UserschuntDesktop6.png" alt="6" /></p>
+<p>如果一切顺利，所有静态页面都会生成到public目录</p>
 
 <h3 id="4-将pubilc目录里所有文件push到刚创建的repository的master分支">4. 将pubilc目录里所有文件push到刚创建的Repository的master分支。</h3>
 
@@ -538,7 +538,7 @@ $ git push -u origin master
 
 <p>浏览器里访问：<a href="https://hanchuntao.github.io/">https://hanchuntao.github.io/</a></p>
 
-<h2 id="八-错误处理">八、错误处理</h2>
+<h2 id="七-错误处理">七、错误处理</h2>
 
 <h3 id="1-unable-to-locate-config-file">1. Unable to locate Config file</h3>
 
@@ -584,13 +584,14 @@ disablePathToLower: true
 
 <h3 id="8-部署到github上后-无内容">8. 部署到github上后, 无内容</h3>
 
-<p><img src="C:UserschuntDesktop7.png" alt="7" />
-个人原因
+<p><img src="C:codehugostatic7.png" alt="7" /></p>
+
+<p>个人原因
 hugo &ndash;theme=hyde &ndash;baseUrl=&ldquo;<a href="https://hanchuntao.github.io/&quot;生成静态页面后，public中会产生相应的目录，没有把这些目录push">https://hanchuntao.github.io/&quot;生成静态页面后，public中会产生相应的目录，没有把这些目录push</a> 到远端</p>
 
 <h3 id="9-部署到github上后一直不显示css样试">9.  部署到github上后一直不显示CSS样试</h3>
 
-<p><img src="C:UserschuntDesktop8.png" alt="8" />
+<p><img src="C:codehugostatic8.png" alt="8" />
 发现是 &ndash;baseUrl=&ldquo;<a href="http://hanchuntao.github.io/&quot;的问题，要用">http://hanchuntao.github.io/&quot;的问题，要用</a> &ndash;baseUrl=&ldquo;<a href="https://hanchuntao.github.io/&quot;">https://hanchuntao.github.io/&quot;</a></p>
 
 
