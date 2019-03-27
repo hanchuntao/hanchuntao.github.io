@@ -381,7 +381,7 @@ missing packages but does not use it to look for updates to existing packages.</
 <h3 id="3-查看安装结果">3.  查看安装结果</h3>
 
 <p>可知hugo已经正常安装
-<img src="how-to-use-hugo1.png" alt="" /></p>
+<img src="https://hanchuntao.github.io/how-to-use-hugo/1.png" alt="" /></p>
 
 <h2 id="三-创建hugo项目">三、创建hugo项目</h2>
 
@@ -416,7 +416,7 @@ missing packages but does not use it to look for updates to existing packages.</
 &gt;* $ hugo new about.md</p>
 
 <p>about.md 自动生成到了 content/about.md ，打开 about.md 看下：
-<img src="how-to-use-hugo2.jpg" alt="" /></p>
+<img src="https://hanchuntao.github.io/how-to-use-hugo/2.jpg" alt="" /></p>
 
 <p>内容是 Markdown 格式的，+++ 之间的内容是 TOML 格式的，根据你的喜好，你可以换成 YAML 格式（使用 &mdash; 标记）或者 JSON 格式。</p>
 
@@ -425,7 +425,7 @@ missing packages but does not use it to look for updates to existing packages.</
 <p>$ hugo new post/first.md</p>
 
 <p>打开编辑 post/first.md ：
-<img src="how-to-use-hugo3.jpg" alt="" /></p>
+<img src="https://hanchuntao.github.io/how-to-use-hugo/3.jpg" alt="" /></p>
 
 <h2 id="五-安装皮肤">五、安装皮肤</h2>
 
@@ -537,7 +537,7 @@ $ git push -u origin master
 </code></pre>
 
 <p>浏览器里访问：<a href="https://hanchuntao.github.io/">https://hanchuntao.github.io/</a>
-<img src="how-to-use-hugo6.png" alt="" /></p>
+<img src="https://hanchuntao.github.io/how-to-use-hugo/6.png" alt="" /></p>
 
 <h2 id="七-错误处理">七、错误处理</h2>
 
@@ -585,19 +585,19 @@ disablePathToLower: true
 
 <h3 id="8-部署到github上后-无内容">8. 部署到github上后, 无内容</h3>
 
-<p><img src="how-to-use-hugo4.png" alt="" /></p>
+<p><img src="https://hanchuntao.github.io/how-to-use-hugo/4.png" alt="" /></p>
 
 <p>个人原因
 hugo &ndash;theme=hyde &ndash;baseUrl=&ldquo;<a href="https://hanchuntao.github.io/&quot;生成静态页面后，public中会产生相应的目录，没有把这些目录push">https://hanchuntao.github.io/&quot;生成静态页面后，public中会产生相应的目录，没有把这些目录push</a> 到远端</p>
 
 <h3 id="9-部署到github上后一直不显示css样试">9.  部署到github上后一直不显示CSS样试</h3>
 
-<p>!5](\how-to-use-hugo\5.png)
+<p>![]](/how-to-use-hugo/5.png)
 发现是 &ndash;baseUrl=&ldquo;<a href="http://hanchuntao.github.io/&quot;的问题，要用">http://hanchuntao.github.io/&quot;的问题，要用</a> &ndash;baseUrl=&ldquo;<a href="https://hanchuntao.github.io/&quot;">https://hanchuntao.github.io/&quot;</a></p>
 
 <h3 id="从github上看到的markdown没有显示图片">从github上看到的markdown没有显示图片</h3>
 
-<p>原因： 图片要保存在static目录下，并显在引用图片时，使用static的相对位置
+<p>原因： 图片要保存在static目录下，并显在引用图片时，使用static的相对位置(例如：/how-to-use-hugo/1.png)
       生成静态网页后，需要把图片也上传到github</p>
 
 
